@@ -1,16 +1,14 @@
-import { useState } from 'react'
-import reactLogo from '../public/assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
-import './index.css'
+import './global.css'
 
 function App() {
 
   return (
-    <>
-      Om Ganeshaya Namaha _/\_
-    </>
+    
+      <p className='text-3xl bg-black text-green-400'>Om Ganeshaya Namaha _/\_</p>
+    
   )
 }
 
