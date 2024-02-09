@@ -1,10 +1,8 @@
 
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
-
 import './global.css'
 import SigninForm from './_auth/forms/SigninForm'
-
 import SignupForm from './_auth/forms/SignupForm'
 import { Home } from './_root/pages'
 import AuthLayout from './_auth/AuthLayout'
