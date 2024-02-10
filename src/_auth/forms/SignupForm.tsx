@@ -21,7 +21,7 @@ const SignupForm = () => {
   })
 
   const isLoading = false;
-  const handleSignup = (values: z.infer<typeof SignupValidation>) => {
+  const handleSignup = async (values: z.infer<typeof SignupValidation>) => {
       
   }
   return (
