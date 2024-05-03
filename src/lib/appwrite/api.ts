@@ -167,6 +167,8 @@ export async function createPost(post: INewPost) {
     }
 }
 
+
+
 export function getFilePreview(fileId: string) {
     try {
       const fileUrl = storage.getFilePreview(
@@ -184,4 +186,20 @@ export function getFilePreview(fileId: string) {
     } catch (error) {
       console.log(error);
     }
+}
+
+export async function getRecentPosts() {
+  try {
+    const posts = await databases.listDocuments(
+      appwriteConfig.databaseId,
+      appwriteConfig.postCollectionId,
+      [Query.orderDesc("$createdAt"), Query.limit(20)]
+    );
+
+    if (!posts) throw Error;
+
+    return posts;
+  } catch (error) {
+    console.log(error);
+  }
 }
