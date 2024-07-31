@@ -22,3 +22,7 @@ export function formatDateString(dateString: string) {
 
   return `${formattedDate} at ${time}`;
 }
+
+export const checkIsLiked = (likeList: string[], userId: string) => {
+  return likeList.includes(userId);
+};
