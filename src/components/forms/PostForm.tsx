@@ -15,10 +15,10 @@ import { useCreatePost } from "@/lib/react-query/queriesAndMutations"
 
 type PostFormProps = {
   post?: Models.Document;
- 
+  action: 'create' | 'update'
 };
 
-const PostForm = ({post} : PostFormProps) => {
+const PostForm = ({post,action} : PostFormProps) => {
     const {user} = useUserContext();
     const navigate = useNavigate()
     const {mutateAsync: createPost, isPending: isLoadingCreate} = useCreatePost();
@@ -50,6 +50,8 @@ const PostForm = ({post} : PostFormProps) => {
 
         navigate('/')
       }
+
+
   return (
     <Form {...form}>
     <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-9 w-full  max-w-5xl">
