@@ -1,7 +1,6 @@
-import Footer from '@/components/shared/Footer'
+import BottomNavbar from '@/components/shared/BottomNavbar'
 import Navbar from '@/components/shared/Navbar'
 import Sidebar from '@/components/shared/Sidebar'
-import React from 'react'
 import { Outlet } from 'react-router-dom'
 
 const RootLayout = () => {
@@ -14,7 +13,7 @@ const RootLayout = () => {
           <Outlet/>
       </section>
 
-      <Footer/>
+      <BottomNavbar/>
     </div>
   )
 }
